@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class Photographer{
 
   private String name;
-  private ArrayList cameras;
+  private ArrayList<Printable> cameras;
 
   public Photographer(String name) {
     this.name = name;
-    this.cameras = new ArrayList();
+    this.cameras = new ArrayList<Printable>();
   }
 
   public String getName() {
@@ -27,5 +27,37 @@ public class Photographer{
   public void removeCamera(){
       this.cameras.remove(0);
   }
+
+  // Give the Photographer the ablity to print out all the details of her camera collection. The class should have a method that returns a String of all the camera details.
+
+  // public void details(Printable equipment){ 
+  //   details = this.cameras.add(equipment);
+  //       return details; 
+  // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

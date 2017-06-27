@@ -1,5 +1,4 @@
 public interface Printable {
 
-  public String printDetails();
-  
+  String printDetails();
 }

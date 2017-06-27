@@ -5,11 +5,15 @@ import org.junit.*;
 public class PhotographerTest{
   Photographer photographer;
   Camera camera;
+  AnalogCamera analogCamera;
+  DigitalCamera digitalCamera;
 
   @Before
   public void before() {
     photographer = new Photographer("Ciaran");
     camera = new Camera();
+    analogCamera = new AnalogCamera();
+    digitalCamera = new DigitalCamera();
   }
 
   @Test
@@ -34,4 +38,28 @@ public class PhotographerTest{
     photographer.removeCamera();
     assertEquals(0, photographer.cameraCount());
   }
+
+  @Test
+  public void testAnalogOutput(){
+    assertEquals("Nikon 34T, Noise reduction filter, Hi-resolution", analogCamera.printDetails());
+  }
+
+  // @Test
+  // public void testPrintDetails(){
+  //   photographer.()
+  //   details = photographer.details;
+  //   assertEquals("Nikon 34T, Noise reduction filter, Hi-resolutionSony ILCE5100L, No noise reduciton, Lo-resolution", details );
+  // }
+
+
+
+
+
+
+
+
+
+
+
+
 }
