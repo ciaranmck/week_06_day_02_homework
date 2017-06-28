@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Photographer{
 
@@ -28,12 +29,19 @@ public class Photographer{
       this.cameras.remove(0);
   }
 
-  // Give the Photographer the ablity to print out all the details of her camera collection. The class should have a method that returns a String of all the camera details.
+  public void addDetails(Printable details) {
+    this.cameras.add(details);
+  }
 
-  // public void details(Printable equipment){ 
-  //   details = this.cameras.add(equipment);
-  //       return details; 
-  // }
+  public String Details() {
+    for ( Printable info : this.cameras) {
+      String fulldetails = info.printDetails();
+    }
+    return fulldetails;
+  }
+ 
+  // possibly missing a step to turn printables back into analog/digital cameras
+
 
 
 

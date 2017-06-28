@@ -44,6 +44,21 @@ public class PhotographerTest{
     assertEquals("Nikon 34T, Noise reduction filter, Hi-resolution", analogCamera.printDetails());
   }
 
+  @Test
+  public void testAddAnalog(){
+    photographer.addDetails(analogCamera);
+    assertEquals(1, photographer.cameraCount());
+  }
+
+  @Test
+  public void testPrintDetails(){
+    photographer.addDetails(analogCamera);
+    photographer.addDetails(digitalCamera);
+    // Printable info = photographer.removeCamera();
+    // Printable info = photographer.removeCamera();
+    assertEquals("Nikon 34T, Noise reduction filter, Hi-resolutionSony ILCE5100L, No noise reduciton, Lo-resolution", photographer.details );
+  }
+
   // @Test
   // public void testPrintDetails(){
   //   photographer.()
