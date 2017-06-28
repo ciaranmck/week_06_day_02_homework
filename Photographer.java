@@ -33,9 +33,10 @@ public class Photographer{
     this.cameras.add(details);
   }
 
-  public String Details() {
-    for ( Printable info : this.cameras) {
-      String fulldetails = info.printDetails();
+  public String details() {
+    String fulldetails = "";
+    for ( Printable camera : this.cameras) {
+      fulldetails += camera.printDetails() + " /n ";
     }
     return fulldetails;
   }
